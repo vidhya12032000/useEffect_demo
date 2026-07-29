@@ -55,23 +55,23 @@ const message=count%2===0 ? "even" :"odd";
 
 //----------document title sync-----
 
-//  useEffect(()=>{
-//     document.title=`Count:${count}`;
-//     },[count])
+ useEffect(()=>{
+    document.title=`Count:${count}`;
+    },[count])
 
 
 //---------eventListener and Cleanup
 
-//  useEffect(()=>{
-//    function handleClick(){
-//     console.log("window clicked");
-//    }
-//    window.addEventListener("click",handleClick);
+ useEffect(()=>{
+   function handleClick(){
+    console.log("window clicked");
+   }
+   window.addEventListener("click",handleClick);
 
-//    return ()=>{
-//     window.removeEventListener("click",handleClick)
-//    };
-//     },[])
+   return ()=>{
+    window.removeEventListener("click",handleClick)
+   };
+    },[])
 
 
 
@@ -81,10 +81,11 @@ const message=count%2===0 ? "even" :"odd";
         {message}
 
 <p>Click anywhere</p>
-
+<p>{count}</p>
         <button onClick={()=>{setCount(count+1)}}>increase </button>
-    
-    <input value={name} onChange={(e)=>setName(e.target.value)} />
+    <br/>
+    <br/>
+    <label>Username</label><input placeholder='Enter your name' value={name} onChange={(e)=>setName(e.target.value)} />
     </div>
   )
 }
