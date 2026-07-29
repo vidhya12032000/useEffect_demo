@@ -62,16 +62,16 @@ const message=count%2===0 ? "even" :"odd";
 
 //---------eventListener and Cleanup
 
- useEffect(()=>{
-   function handleClick(){
-    console.log("window clicked");
-   }
-   window.addEventListener("click",handleClick);
+//  useEffect(()=>{
+//    function handleClick(){
+//     console.log("window clicked");
+//    }
+//    window.addEventListener("click",handleClick);
 
-   return ()=>{
-    window.removeEventListener("click",handleClick)
-   };
-    },[])
+//    return ()=>{
+//     window.removeEventListener("click",handleClick)
+//    };
+//     },[])
 
 
 
